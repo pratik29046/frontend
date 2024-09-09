@@ -1,0 +1,48 @@
+@import "../../variables/_variables.scss";
+
+@mixin button-style($bg-color, $text-color) {
+  padding: 10px 20px;
+  border: none;
+  border-radius: $border-radius;
+  background-color: $bg-color;
+  color: $text-color;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: $background-color;
+}
+
+.formLabel {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: $text-color;
+}
+
+.formInput {
+  margin-bottom: 16px;
+  padding: 10px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  font-size: 14px;
+  width: 100%;
+}
+
+.submitButton {
+  @include button-style($primary-color, #fff);
+}
